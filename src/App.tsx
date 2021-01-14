@@ -5,17 +5,32 @@ import { initialText } from "./initialText";
 
 function App() {
   const [code, setCode] = useState(initialText);
+  const [hideEditor, setHideEditor] = useState(false);
+  const [hidePreviewer, setHidePreviewer] = useState(false);
 
-  console.log({ code });
   return (
     <>
       <Editor
         code={code}
-        handleChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        handleChange={(event) => {
           setCode(event.target.value);
         }}
+        hideSelf={hideEditor}
+        hideOther={hidePreviewer}
+        handleHideOther={(event) => {
+          event.preventDefault();
+          setHidePreviewer(!hidePreviewer);
+        }}
       />
-      <Previewer code={code} />
+      <Previewer
+        code={code}
+        hideSelf={hidePreviewer}
+        hideOther={hideEditor}
+        handleHideOther={(event) => {
+          event.preventDefault();
+          setHideEditor(!hideEditor);
+        }}
+      />
     </>
   );
 }
