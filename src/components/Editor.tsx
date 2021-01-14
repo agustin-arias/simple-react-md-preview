@@ -1,18 +1,11 @@
 import React from "react";
-import { TextArea } from "./TextArea";
-import { Toolbar } from "./Toolbar";
+import { Window } from "./Window";
 
-interface EditorProps {}
+interface EditorProps {
+  code: string;
+  handleChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+}
 
-export const Editor: React.FC<EditorProps> = () => {
-  return (
-    <div className="container border border-dark p-0 mt-3 shadow mb-5 bg-white rounded">
-      <form>
-        <div className="form-group m-0">
-          <Toolbar name="editor" />
-          <TextArea />
-        </div>
-      </form>
-    </div>
-  );
+export const Editor: React.FC<EditorProps> = ({ code, handleChange }) => {
+  return <Window name="editor" text={code} handleChange={handleChange} />;
 };
