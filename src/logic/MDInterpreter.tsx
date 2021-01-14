@@ -1,6 +1,7 @@
 import parse from "html-react-parser";
 import marked from "marked";
 import React from "react";
+
 interface MDInterpreterProps {
   code: string;
 }
