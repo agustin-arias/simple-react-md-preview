@@ -11,6 +11,13 @@ interface AreaProps {
 
 export const Area: React.FC<AreaProps> = (props) => {
   const { text } = props;
+  const style: React.CSSProperties = {
+    backgroundColor: "white",
+    color: "black",
+    height: "600px",
+    overflowY: "auto",
+    fontSize: ".9em",
+  };
   if (props.type === "editor") {
     const { handleChange } = props;
     return (
@@ -19,27 +26,12 @@ export const Area: React.FC<AreaProps> = (props) => {
         id="editor"
         value={text}
         onChange={handleChange}
-        style={{
-          backgroundColor: "white",
-          color: "black",
-          height: "600px",
-          overflowY: "auto",
-          fontSize: ".9em",
-        }}
+        style={style}
       ></textarea>
     );
   } else {
     return (
-      <div
-        className="container p-1 rounded-0"
-        id="preview"
-        style={{
-          backgroundColor: "white",
-          color: "black",
-          height: "600px",
-          overflowY: "auto",
-        }}
-      >
+      <div className="container p-1 rounded-0" id="preview" style={style}>
         <MDInterpreter code={text} />
       </div>
     );
