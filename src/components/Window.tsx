@@ -25,7 +25,7 @@ export const Window: React.FC<WindowProps> = ({
 }) => {
   return (
     <div
-      className={`container border border-dark p-0 mt-3 mb-5 my-1 shadow bg-white rounded ${
+      className={`container border border-dark p-0 mt-3 mb-5 my-1 shadow bg-white rounded animate-width  ${
         hideSelf ? "d-none" : ""
       } ${hideOther ? "" : `fixed-width-${name}`}
       `}

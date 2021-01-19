@@ -19,3 +19,7 @@
   outline: none;
   box-shadow: none;
 }
+
+.animate-width {
+  transition: width 1.5s;
+}
