@@ -9,7 +9,7 @@ function App() {
   const [hidePreviewer, setHidePreviewer] = useState(false);
 
   return (
-    <>
+    <div className="d-md-flex">
       <Editor
         code={code}
         handleChange={(event) => {
@@ -31,7 +31,7 @@ function App() {
           setHideEditor(!hideEditor);
         }}
       />
-    </>
+    </div>
   );
 }
 

@@ -15,12 +15,12 @@ export const TextArea: React.FC<TextAreaProps> = ({
 }) => {
   return (
     <textarea
-      className="form-control rounded-0 p-1 m-0"
+      className="form-control rounded-0 p-1 m-0 h-md-100"
       id="editor"
       value={text}
       onChange={handleChange}
       style={{
-        height: hideOther ? "750px" : "500px",
+        height: "600px",
         fontSize: ".9em",
         backgroundColor: "#d3d3d4",
         color: "black",
