@@ -1,6 +1,5 @@
 import React from "react";
-import { PreviewArea } from "./PreviewArea";
-import { TextArea } from "./TextArea";
+import { Area } from "./Area";
 import { Toolbar } from "./Toolbar";
 import "./Window.css";
 
@@ -38,15 +37,7 @@ export const Window: React.FC<WindowProps> = ({
             hideOther={hideOther}
             handleHideOther={handleHideOther}
           />
-          {name === "editor" ? (
-            <TextArea
-              text={text}
-              handleChange={handleChange}
-              hideOther={hideOther}
-            />
-          ) : (
-            <PreviewArea code={text} />
-          )}
+          <Area text={text} type={name} handleChange={handleChange} />
         </div>
       </form>
     </div>
