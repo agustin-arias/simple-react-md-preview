@@ -7,7 +7,11 @@ interface PreviewAreaProps {
 
 export const PreviewArea: React.FC<PreviewAreaProps> = ({ code }) => {
   return (
-    <div className="container p-1 rounded-0" id="preview">
+    <div
+      className="container p-1 rounded-0"
+      id="preview"
+      style={{ backgroundColor: "#d3d3d4", color: "black" }}
+    >
       <MDInterpreter code={code} />
     </div>
   );

@@ -19,7 +19,12 @@ export const TextArea: React.FC<TextAreaProps> = ({
       id="editor"
       value={text}
       onChange={handleChange}
-      style={{ height: hideOther ? "750px" : "500px", fontSize: ".9em" }}
+      style={{
+        height: hideOther ? "750px" : "500px",
+        fontSize: ".9em",
+        backgroundColor: "#d3d3d4",
+        color: "black",
+      }}
     ></textarea>
   );
 };

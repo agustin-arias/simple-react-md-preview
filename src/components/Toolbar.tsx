@@ -23,6 +23,7 @@ export const Toolbar: React.FC<ToolbarProps> = ({
     <div
       className="d-flex justify-content-between border-bottom border-dark px-2"
       key={`toolbar-${name}`}
+      style={{ backgroundColor: "#5f51ac" }}
     >
       <div className="d-flex justify-content-between">
         <FontAwesomeIcon icon={faCode} style={{ marginTop: "5px" }} />
