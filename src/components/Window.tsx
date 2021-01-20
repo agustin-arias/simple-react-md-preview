@@ -27,7 +27,7 @@ export const Window: React.FC<WindowProps> = ({
   }
   return (
     <div
-      className={`${hideOther ? "col-md-12" : "col-md-6"} px-1 pt-2`}
+      className={`${hideOther ? "col-md-12" : "col-md-6"} px-1 pt-2 animate-width`}
       key={`window-${name}`}
     >
       <form>

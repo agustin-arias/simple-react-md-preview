@@ -1,15 +1,3 @@
-@media only screen and (min-width: 586px) {
-  .fixed-width-editor {
-    width: 538px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .fixed-width-previewer {
-    width: 718px;
-  }
-}
-
 .btn:hover {
   color: #77dd18 !important;
   text-decoration: none;
