@@ -12,7 +12,6 @@ function App() {
   return (
     <>
       <LinkToPage url="https://github.com/agustinntarias/simple-react-md-preview" />
-
       <div className="d-md-flex">
         <Editor
           code={code}
